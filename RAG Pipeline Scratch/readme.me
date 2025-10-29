@@ -1,1 +1,32 @@
+# RAG Implementation from Scratch
+
+A basic Retrieval-Augmented Generation (RAG) system built from scratch using Python, demonstrating fundamental concepts of semantic search and LLM integration.
+
+## Overview
+
+This notebook implements a simple RAG pipeline that retrieves relevant documents based on user queries and generates contextual responses using a local LLM (Llama2 via Ollama).
+
+## Features
+
+- **Document Corpus**: Small dataset of activity recommendations
+- **Cosine Similarity**: Custom implementation for document retrieval using token frequency-based embeddings
+- **Ranking System**: Returns the most relevant document based on similarity scores
+- **LLM Integration**: Uses Ollama with Llama2 model for response generation
+- **Streaming Responses**: Real-time token streaming from the LLM
+
+## Components
+
+1. **Dataset**: 10 sample documents containing various activity suggestions
+2. **Cosine Similarity Function**: Calculates similarity between query and documents using word frequency vectors
+3. **Response Ranking**: Identifies and returns the most relevant document
+4. **Ollama Setup**: Configures and runs Llama2 locally in Google Colab
+5. **LLM Query Handler**: Sends prompts with retrieved context to generate personalized recommendations
+
+## How It Works
+
+1. User provides a query (e.g., "I like fresh air")
+2. System calculates cosine similarity between query and all documents
+3. Most relevant document is retrieved
+4. Document context + user query are sent to Llama2
+5. LLM generates a concise, contextual recommendation
 
